@@ -122,9 +122,32 @@ Based on the conducted tests, several performance bottlenecks were identified th
 Based on the test results and my observations, several improvements can be made to enhance system performance. Firstly, implementing caching can help reduce response time for repeated requests. Secondly, optimizing backend processing can improve the system’s ability to handle high user loads more efficiently. 
 Secondly, using load balancing can distribute traffic more evenly, especially during stress conditions. Monitoring tools should also be applied to detect performance issues such as latency spikes during long-duration testing.Finally, these improvements can help increase performance, stability, and scalability of the API.
 
+## Additional Test: Resilience Test ##
+
+I conducted an extra test, which is a resilience test to explore how the API behaves under more realistic user interaction patterns. This test was designed to simulate irregular user activity by introducing random delays between requests. Unlike traditional tests that generate continuous traffic, this approach reflects how actual users interact with a system, where requests are not constant and may vary over time.
+
+### Resilience Test Results ##
+
+- Average Response Time: 392.53 ms  
+- Minimum Response Time: 267.64 ms  
+- Median Response Time: 305.25 ms  
+- Maximum Response Time: 5.81 s  
+
+- 90th Percentile: 567.74 ms  
+- 95th Percentile: 797.47 ms  
+
+- Total Requests: 2,498  
+- Throughput: 20.34 requests/second  
+- Error Rate: 0.00%  
+- Virtual Users: up to 30  
+
+
+## Obseravtion ##
+
+From my observation, the system maintained stable performance even with irregular request patterns. This indicates that the API is capable of handling more realistic usage scenarios, although latency spikes were still observed at higher response times. This additional test provided deeper insight into system behavior beyond standard load conditions and helped me better understand how performance testing can reflect real-world usage.
 
 ## Conclusion ##
 
-In conclusion, this project successfully evaluated the performance of the Random User API using Grafana k6 through load, stress, and soak testing. From my testing, the API performed well under normal conditions and remained stable with zero error rates across all scenarios. However, response times increased during high load and prolonged testing, indicating areas for improvement. Lastly, the system is reliable but can be further optimized to handle extreme traffic more efficiently. This individual assignment helped me understand how performance testing tools can be used to analyze system behavior and identify potential performance issues in real-world applications.
+In conclusion, this project successfully evaluated the performance of the Random User API using Grafana k6 through load, stress, and soak testing. From my testing, the API performed well under normal conditions and remained stable with zero error rates across all scenarios. However, response times increased during high load and prolonged testing, indicating areas for improvement. Additionally, an extra resilience test was conducted to simulate more realistic user behavior. This test showed that the API can handle irregular usage patterns while maintaining overall stability. Lastly, the system is reliable but can be further optimized to handle extreme traffic more efficiently. This individual assignment helped me understand how performance testing tools can be used to analyze system behavior and identify potential performance issues in real-world applications.
 
 
