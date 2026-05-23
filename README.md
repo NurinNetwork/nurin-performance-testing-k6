@@ -150,4 +150,6 @@ From my observation, the system maintained stable performance even with irregula
 
 In conclusion, this project successfully evaluated the performance of the Random User API using Grafana k6 through load, stress, and soak testing. From my testing, the API performed well under normal conditions and remained stable with zero error rates across all scenarios. However, response times increased during high load and prolonged testing, indicating areas for improvement. Additionally, an extra resilience test was conducted to simulate more realistic user behavior. This test showed that the API can handle irregular usage patterns while maintaining overall stability. Lastly, the system is reliable but can be further optimized to handle extreme traffic more efficiently. This individual assignment helped me understand how performance testing tools can be used to analyze system behavior and identify potential performance issues in real-world applications.
 
+## Video Demo ##
 
+Click the link to watch: https://youtu.be/km461pePgjo
